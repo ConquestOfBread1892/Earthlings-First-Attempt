@@ -56,7 +56,7 @@ collision_mask = 4026531848
 position = Vector2(-176, 96)
 
 [node name="LargeRockPushable1" parent="WorldObjectManager" instance=ExtResource("6_03hhd")]
-position = Vector2(-80, 32)
+position = Vector2(-112, 32)
 
 [node name="TrackingEye" parent="WorldObjectManager/LargeRockPushable1" instance=ExtResource("7_mhong")]
 gaze_target = 0
