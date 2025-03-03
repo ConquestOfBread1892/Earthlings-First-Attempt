@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://6bytwuwau68q"]
+
+[ext_resource type="Script" path="res://Scripts/WorldObjects/General/pushable_object.gd" id="1_nat8m"]
+
+[node name="PushableObject" type="CharacterBody2D"]
+collision_layer = 512
+collision_mask = 4026536521
+script = ExtResource("1_nat8m")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+
+[node name="PushArea" type="Area2D" parent="."]
+
+[node name="PushShape" type="CollisionShape2D" parent="PushArea"]
+position = Vector2(0, 1)
+scale = Vector2(1.05, 1.05)
+
+[connection signal="body_entered" from="PushArea" to="." method="_on_push_area_body_entered"]
+[connection signal="body_exited" from="PushArea" to="." method="_on_push_area_body_exited"]

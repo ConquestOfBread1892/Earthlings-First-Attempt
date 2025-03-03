@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://3wkgiogtysoy"]
+
+[ext_resource type="Script" path="res://Scripts/modulate_test.gd" id="1_jm152"]
+
+[node name="ModulateTest" type="Node"]
+script = ExtResource("1_jm152")

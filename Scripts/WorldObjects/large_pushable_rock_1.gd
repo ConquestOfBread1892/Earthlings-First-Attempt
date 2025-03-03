@@ -1,0 +1,1 @@
+class_name LargeRockPushable1 extends PushableObject

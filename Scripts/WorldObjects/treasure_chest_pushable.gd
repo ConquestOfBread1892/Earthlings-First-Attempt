@@ -1,0 +1,1 @@
+class_name TreasureChestPushable extends PushableObject

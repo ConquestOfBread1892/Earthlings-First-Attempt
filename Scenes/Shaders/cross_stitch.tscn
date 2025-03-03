@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://tysoigh3igio"]
+
+[ext_resource type="Shader" path="res://Shaders/cross_stich.gdshader" id="1_h7eq7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7svjp"]
+shader = ExtResource("1_h7eq7")
+shader_parameter/fabric_color = Color(0.93, 0.89, 0.82, 1)
+shader_parameter/use_screen_texture = true
+shader_parameter/stitch_density = 1.0
+shader_parameter/stitch_thickness = 0.7
+shader_parameter/grid_width = 0.03
+shader_parameter/color_reduction = 8.0
+shader_parameter/stitch_brightness = 1.2
+shader_parameter/fabric_visibility = 0.08
+
+[node name="CanvasLayer" type="CanvasLayer"]
+layer = 100
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_7svjp")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

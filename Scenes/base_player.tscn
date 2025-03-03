@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://c01yak2ern8xb"]
+
+[ext_resource type="Script" path="res://Scripts/base_player.gd" id="1_sqmdy"]
+[ext_resource type="Script" path="res://Scripts/player_animation_controller.gd" id="2_7pc3d"]
+[ext_resource type="PackedScene" uid="uid://dg6aiggbs1joc" path="res://Scenes/player_eye.tscn" id="3_j0xxi"]
+
+[node name="BasePlayer" type="CharacterBody2D"]
+collision_mask = 4026536520
+motion_mode = 1
+script = ExtResource("1_sqmdy")
+
+[node name="PlayerAnimationController" type="AnimatedSprite2D" parent="."]
+script = ExtResource("2_7pc3d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
+
+[node name="PlayerEye" parent="." instance=ExtResource("3_j0xxi")]
+
+[connection signal="frame_changed" from="PlayerAnimationController" to="PlayerAnimationController" method="_on_frame_changed"]

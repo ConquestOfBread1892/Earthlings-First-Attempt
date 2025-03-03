@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+    <!-- Shield base - slightly darker brown for outline -->
+    <path d="M5 2 L11 2 L12 3 L12 12 L8 14 L4 12 L4 3 Z" fill="#8B4513"/>
+    
+    <!-- Shield inner - lighter brown -->
+    <path d="M5 3 L11 3 L11 11 L8 13 L5 11 Z" fill="#DEB887"/>
+    
+    <!-- Shield decoration - dark accent -->
+    <path d="M6 4 L10 4 L10 10 L8 11 L6 10 Z" fill="#8B4513"/>
+    
+    <!-- Shield center emblem -->
+    <path d="M7 5 L9 5 L9 9 L8 10 L7 9 Z" fill="#DEB887"/>
+    
+    <!-- Highlights -->
+    <path d="M6 4 L7 4 L7 9 L6 8 Z" fill="#D2691E"/>
+</svg>

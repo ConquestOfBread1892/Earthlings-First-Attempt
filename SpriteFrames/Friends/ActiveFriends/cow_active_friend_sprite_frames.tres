@@ -1,0 +1,37 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://bdfwh7t1dyse2"]
+
+[ext_resource type="Texture2D" uid="uid://1jekfbwh41ct" path="res://Assets/Actor/Animals/Cow/SpriteSheetWhiteSide.png" id="1_nqvg1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hsulp"]
+atlas = ExtResource("1_nqvg1")
+region = Rect2(0, 0, 24, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ybqvh"]
+atlas = ExtResource("1_nqvg1")
+region = Rect2(0, 0, 24, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_68ugr"]
+atlas = ExtResource("1_nqvg1")
+region = Rect2(24, 0, 24, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hsulp")
+}],
+"loop": false,
+"name": &"idle_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ybqvh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_68ugr")
+}],
+"loop": true,
+"name": &"walk_left",
+"speed": 5.0
+}]

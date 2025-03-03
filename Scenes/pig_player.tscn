@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://bnb35im7vv5kh"]
+
+[ext_resource type="PackedScene" uid="uid://c01yak2ern8xb" path="res://Scenes/base_player.tscn" id="1_x8emc"]
+[ext_resource type="Script" path="res://Scripts/pig_player.gd" id="2_7wfu1"]
+[ext_resource type="SpriteFrames" uid="uid://5fo0g0ohcnck" path="res://SpriteFrames/Player/pig_player_sprite_frames.tres" id="3_67nah"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vnf2m"]
+radius = 7.0
+
+[node name="PigPlayer" instance=ExtResource("1_x8emc")]
+script = ExtResource("2_7wfu1")
+
+[node name="PlayerAnimationController" parent="." index="0"]
+sprite_frames = ExtResource("3_67nah")
+animation = &"idle_left"
+autoplay = "idle_left"
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_vnf2m")

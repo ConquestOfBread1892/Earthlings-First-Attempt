@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmbyylyvt0xai"]
+
+[ext_resource type="PackedScene" uid="uid://d3tsxprg201et" path="res://Scenes/base_active_friend.tscn" id="1_hpi8h"]
+[ext_resource type="Script" path="res://Scripts/chicken_active_friend.gd" id="2_hu6ak"]
+[ext_resource type="SpriteFrames" uid="uid://4gt3emukov25" path="res://SpriteFrames/Friends/ActiveFriends/chicken_active_friend_sprite_frames.tres" id="3_hsy5s"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c8vww"]
+radius = 6.0
+
+[node name="ChickenActiveFriend" instance=ExtResource("1_hpi8h")]
+script = ExtResource("2_hu6ak")
+
+[node name="ActiveFriendAnimator" parent="." index="0"]
+scale = Vector2(0.75, 0.75)
+sprite_frames = ExtResource("3_hsy5s")
+animation = &"walk_left"
+autoplay = "idle_left"
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("CircleShape2D_c8vww")

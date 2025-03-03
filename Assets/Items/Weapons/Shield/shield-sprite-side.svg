@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+    <!-- Shield edge/outline - darkest brown -->
+    <path d="M6 2 L9 2 L9 12 L7 14 L6 12 Z" fill="#8B4513"/>
+    
+    <!-- Shield side face - medium brown -->
+    <path d="M7 3 L8 3 L8 11 L7 13 L7 11 Z" fill="#DEB887"/>
+    
+    <!-- Shield decoration - vertical stripe -->
+    <path d="M7 4 L8 4 L8 10 L7 11 Z" fill="#D2691E"/>
+    
+    <!-- Edge highlight at top -->
+    <path d="M7 3 L8 3 L8 4 L7 4 Z" fill="#F4A460"/>
+</svg>

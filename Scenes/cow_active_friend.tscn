@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://dg8h7vlxdy5ow"]
+
+[ext_resource type="PackedScene" uid="uid://d3tsxprg201et" path="res://Scenes/base_active_friend.tscn" id="1_4jwk2"]
+[ext_resource type="Script" path="res://Scripts/cow_active_friend.gd" id="2_qit7q"]
+[ext_resource type="SpriteFrames" uid="uid://bdfwh7t1dyse2" path="res://SpriteFrames/Friends/ActiveFriends/cow_active_friend_sprite_frames.tres" id="3_3d55s"]
+[ext_resource type="Shape2D" uid="uid://xva2p4ds2w2d" path="res://CollisionShapes/Cow/cow_active_friend.tres" id="4_tijj1"]
+
+[node name="CowActiveFriend" instance=ExtResource("1_4jwk2")]
+script = ExtResource("2_qit7q")
+
+[node name="ActiveFriendAnimator" parent="." index="0"]
+sprite_frames = ExtResource("3_3d55s")
+animation = &"idle_left"
+
+[node name="StaticBody2D#CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+position = Vector2(-1, 1)
+rotation = 1.5708
+shape = ExtResource("4_tijj1")

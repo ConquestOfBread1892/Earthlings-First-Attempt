@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://bt2c44t61s3ui"]
+
+[ext_resource type="PackedScene" uid="uid://c01yak2ern8xb" path="res://Scenes/base_player.tscn" id="1_w76w2"]
+[ext_resource type="Script" path="res://Scripts/alien_player.gd" id="2_b7a3r"]
+[ext_resource type="SpriteFrames" uid="uid://dpra8brgfqerg" path="res://SpriteFrames/Player/alien_player_sprite_frames.tres" id="3_bmrdv"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a105q"]
+radius = 5.0
+height = 16.0
+
+[node name="AlienPlayer" instance=ExtResource("1_w76w2")]
+script = ExtResource("2_b7a3r")
+
+[node name="PlayerAnimationController" parent="." index="0"]
+sprite_frames = ExtResource("3_bmrdv")
+animation = &"walk_up"
+autoplay = "idle_down"
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("CapsuleShape2D_a105q")

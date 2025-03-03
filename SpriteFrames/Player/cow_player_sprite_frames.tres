@@ -1,0 +1,37 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://u0o3a0gndgae"]
+
+[ext_resource type="Texture2D" uid="uid://u4rnh1phqmkh" path="res://Assets/Personal/Player/PlayerCow/player_cow_walk_left.png" id="1_mxec5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lf3ha"]
+atlas = ExtResource("1_mxec5")
+region = Rect2(0, 0, 24, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5u5kd"]
+atlas = ExtResource("1_mxec5")
+region = Rect2(0, 0, 24, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d6dbh"]
+atlas = ExtResource("1_mxec5")
+region = Rect2(24, 0, 24, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lf3ha")
+}],
+"loop": false,
+"name": &"idle_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5u5kd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d6dbh")
+}],
+"loop": true,
+"name": &"walk_left",
+"speed": 5.0
+}]

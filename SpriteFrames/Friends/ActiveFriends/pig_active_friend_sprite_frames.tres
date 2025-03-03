@@ -1,0 +1,37 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://baobdwt7sbj8m"]
+
+[ext_resource type="Texture2D" uid="uid://brqdefpdlrgcv" path="res://Assets/Actor/Animals/Pig/SpriteSheetPink.png" id="1_u52qw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_75jqd"]
+atlas = ExtResource("1_u52qw")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dmhcn"]
+atlas = ExtResource("1_u52qw")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38yy7"]
+atlas = ExtResource("1_u52qw")
+region = Rect2(16, 0, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75jqd")
+}],
+"loop": false,
+"name": &"idle_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dmhcn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_38yy7")
+}],
+"loop": true,
+"name": &"walk_left",
+"speed": 5.0
+}]

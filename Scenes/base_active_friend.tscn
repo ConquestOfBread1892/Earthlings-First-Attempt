@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3tsxprg201et"]
+
+[ext_resource type="Script" path="res://Scripts/base_active_friend.gd" id="1_wusir"]
+[ext_resource type="Script" path="res://Scripts/active_friend_animation_controllergd.gd" id="2_td17m"]
+
+[node name="BaseActiveFriend" type="CharacterBody2D"]
+collision_layer = 8
+collision_mask = 4026536513
+motion_mode = 1
+script = ExtResource("1_wusir")
+
+[node name="ActiveFriendAnimator" type="AnimatedSprite2D" parent="."]
+script = ExtResource("2_td17m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]

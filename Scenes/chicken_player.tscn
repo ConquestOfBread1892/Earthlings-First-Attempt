@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://dk3afgn0nq4cv"]
+
+[ext_resource type="PackedScene" uid="uid://c01yak2ern8xb" path="res://Scenes/base_player.tscn" id="1_rnprk"]
+[ext_resource type="Script" path="res://Scripts/chicken_player.gd" id="2_2ta8f"]
+[ext_resource type="SpriteFrames" uid="uid://28x6doiflrne" path="res://SpriteFrames/Player/chicken_player_sprite_frames.tres" id="2_e5jtp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fgvu5"]
+radius = 8.0
+
+[node name="ChickenPlayer" instance=ExtResource("1_rnprk")]
+scale = Vector2(0.75, 0.75)
+script = ExtResource("2_2ta8f")
+
+[node name="PlayerAnimationController" parent="." index="0"]
+sprite_frames = ExtResource("2_e5jtp")
+animation = &"idle_left"
+autoplay = "idle_left"
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("CircleShape2D_fgvu5")

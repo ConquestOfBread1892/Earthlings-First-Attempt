@@ -1,0 +1,52 @@
+[gd_scene load_steps=10 format=3 uid="uid://c1dn2i5mnr0wh"]
+
+[ext_resource type="PackedScene" uid="uid://6bytwuwau68q" path="res://Scenes/WorldObjects/General/pushable_object.tscn" id="1_dcuca"]
+[ext_resource type="Script" path="res://Scripts/WorldObjects/large_pushable_rock_1.gd" id="2_j25ml"]
+[ext_resource type="Texture2D" uid="uid://brd3v22f8h5dh" path="res://Assets/Personal/Objects/WorldObjects/Pushables/large_pushable_rock_1.png" id="2_uj1p5"]
+[ext_resource type="Script" path="res://Scripts/Resources/WorldObjects/pushable_properties.gd" id="3_fnjb7"]
+
+[sub_resource type="Resource" id="Resource_pfhdp"]
+script = ExtResource("3_fnjb7")
+push_speed = 150.0
+push_threshold = 0.5
+move_distance = 16.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cstuy"]
+atlas = ExtResource("2_uj1p5")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e0wbi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cstuy")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p2bov"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qnkvd"]
+size = Vector2(16, 16)
+
+[node name="LargeRockPushable1" instance=ExtResource("1_dcuca")]
+script = ExtResource("2_j25ml")
+properties = SubResource("Resource_pfhdp")
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_e0wbi")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 0)
+shape = SubResource("RectangleShape2D_p2bov")
+
+[node name="PushArea" parent="." index="2"]
+collision_layer = 512
+collision_mask = 4026536521
+
+[node name="PushShape" parent="PushArea" index="0"]
+position = Vector2(4.76837e-07, -3.57628e-07)
+shape = SubResource("RectangleShape2D_qnkvd")

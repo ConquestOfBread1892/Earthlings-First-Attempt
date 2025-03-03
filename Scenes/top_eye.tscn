@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4jx3v585kkon"]
+
+[ext_resource type="SpriteFrames" uid="uid://da7n5kxgkc3m2" path="res://SpriteFrames/Player/Eyes/top_eye_sprite_frames.tres" id="1_i1tbe"]
+[ext_resource type="Script" path="res://Scripts/top_eye.gd" id="2_hvf3q"]
+
+[node name="TopEye" type="AnimatedSprite2D"]
+sprite_frames = ExtResource("1_i1tbe")
+animation = &"top_eye_roll"
+script = ExtResource("2_hvf3q")

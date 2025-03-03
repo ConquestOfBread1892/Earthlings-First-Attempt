@@ -1,0 +1,87 @@
+[gd_resource type="SpriteFrames" load_steps=10 format=3 uid="uid://da7n5kxgkc3m2"]
+
+[ext_resource type="Texture2D" uid="uid://o7xop0oavswg" path="res://Assets/Personal/Player/PlayerAlien/top_eye_4_dir.png" id="1_gngem"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oh5oj"]
+atlas = ExtResource("1_gngem")
+region = Rect2(8, 0, 4, 4)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xv5j7"]
+atlas = ExtResource("1_gngem")
+region = Rect2(12, 0, 4, 4)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h1hko"]
+atlas = ExtResource("1_gngem")
+region = Rect2(8, 0, 4, 4)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xi2jy"]
+atlas = ExtResource("1_gngem")
+region = Rect2(0, 0, 4, 4)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vlpcg"]
+atlas = ExtResource("1_gngem")
+region = Rect2(4, 0, 4, 4)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gcmsp"]
+atlas = ExtResource("1_gngem")
+region = Rect2(12, 0, 4, 4)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xqu4r"]
+atlas = ExtResource("1_gngem")
+region = Rect2(0, 0, 4, 4)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ft80o"]
+atlas = ExtResource("1_gngem")
+region = Rect2(4, 0, 4, 4)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oh5oj")
+}],
+"loop": false,
+"name": &"top_eye_down_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xv5j7")
+}],
+"loop": false,
+"name": &"top_eye_down_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h1hko")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xi2jy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vlpcg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gcmsp")
+}],
+"loop": false,
+"name": &"top_eye_roll",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xqu4r")
+}],
+"loop": false,
+"name": &"top_eye_up_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ft80o")
+}],
+"loop": false,
+"name": &"top_eye_up_right",
+"speed": 5.0
+}]

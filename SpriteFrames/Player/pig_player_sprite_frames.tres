@@ -1,0 +1,37 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://5fo0g0ohcnck"]
+
+[ext_resource type="Texture2D" uid="uid://c1orh6eondtl7" path="res://Assets/Personal/Player/PlayerPig/player_pig.png" id="1_e7b3h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2nlke"]
+atlas = ExtResource("1_e7b3h")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tng44"]
+atlas = ExtResource("1_e7b3h")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eemui"]
+atlas = ExtResource("1_e7b3h")
+region = Rect2(16, 0, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2nlke")
+}],
+"loop": false,
+"name": &"idle_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tng44")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eemui")
+}],
+"loop": true,
+"name": &"walk_left",
+"speed": 5.0
+}]

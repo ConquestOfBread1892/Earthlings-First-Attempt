@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5es3nfcqci82"]
+
+[ext_resource type="Script" path="res://Scripts/Eye/tracking_eye.gd" id="1_08b5t"]
+[ext_resource type="SpriteFrames" uid="uid://da7n5kxgkc3m2" path="res://SpriteFrames/Player/Eyes/top_eye_sprite_frames.tres" id="1_l1l6g"]
+
+[node name="TrackingEye" type="AnimatedSprite2D" groups=["WorldEyes"]]
+sprite_frames = ExtResource("1_l1l6g")
+animation = &"top_eye_down_left"
+script = ExtResource("1_08b5t")

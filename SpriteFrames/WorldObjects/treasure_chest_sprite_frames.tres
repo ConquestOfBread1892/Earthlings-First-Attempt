@@ -1,0 +1,49 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://b6qvj51mk7q7l"]
+
+[ext_resource type="Texture2D" uid="uid://e74qy2eou6b4" path="res://Assets/Items/Treasure/BigTreasureChest.png" id="1_vr03u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mfxfr"]
+atlas = ExtResource("1_vr03u")
+region = Rect2(0, 0, 16, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0244h"]
+atlas = ExtResource("1_vr03u")
+region = Rect2(16, 0, 16, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qm67d"]
+atlas = ExtResource("1_vr03u")
+region = Rect2(0, 0, 16, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k1bro"]
+atlas = ExtResource("1_vr03u")
+region = Rect2(16, 0, 16, 14)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mfxfr")
+}],
+"loop": true,
+"name": &"closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0244h")
+}],
+"loop": true,
+"name": &"opened",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qm67d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k1bro")
+}],
+"loop": false,
+"name": &"opening",
+"speed": 5.0
+}]

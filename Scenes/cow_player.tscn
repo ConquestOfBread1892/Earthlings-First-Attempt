@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://c71ojsxuo6cms"]
+
+[ext_resource type="PackedScene" uid="uid://c01yak2ern8xb" path="res://Scenes/base_player.tscn" id="1_qoh7d"]
+[ext_resource type="Script" path="res://Scripts/cow_player.gd" id="2_ptc4m"]
+[ext_resource type="SpriteFrames" uid="uid://u0o3a0gndgae" path="res://SpriteFrames/Player/cow_player_sprite_frames.tres" id="3_dd7on"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tty5o"]
+radius = 6.0
+height = 20.0
+
+[node name="CowPlayer" instance=ExtResource("1_qoh7d")]
+script = ExtResource("2_ptc4m")
+
+[node name="PlayerAnimationController" parent="." index="0"]
+sprite_frames = ExtResource("3_dd7on")
+animation = &"idle_left"
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(-1, 1)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_tty5o")
